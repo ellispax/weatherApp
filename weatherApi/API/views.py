@@ -9,7 +9,7 @@ class WeatherView(APIView):
     def get(self, request, *args, **kwargs):
         city = request.query_params.get('city')
         if city:
-            url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid=<API KEY>'
+            url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid=c263e33729247d585b1bf41636fc4062'
             response = requests.get(url)
             if response.status_code == 200:
                 data = response.json()
