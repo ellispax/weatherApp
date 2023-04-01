@@ -1,12 +1,74 @@
-<div class="container col-md-12 col-xl-6">
-    <div class="search">
-        <input type="text" class="form-control col-md-20" id="location" placeholder="enter location">
-
+<div class="container-fluid mt-3" style="background-color: #e3f2fd;">
+  <div class="row justify-content-center ">
+    <div class="col-md-6">
+      <div class="input-group mb-3 mt-3 ">
+        <input type="text" class="form-control" placeholder="Enter location" [(ngModel)]="cityName">
+        <button class="btn btn-primary" style="border-radius: 3px;" (click)="getWeatherData(cityName)">Search</button>
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary col-md-2 col-xl-3">Submit</button>
+  </div>
 </div>
 
-<div class="cards">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel">
+        <h3>{{ cityName }}</h3>
+        <h5>{{ dateTime }}</h5>
+        <hr>
+        <p><i class="bi bi-cloud-rain"></i> {{ rain }}</p>
+        <div class="weather-info">
+          <p><i class="bi bi-thermometer"></i> {{ temperature }} &deg;C</p>
+          <p><i class="bi bi-droplet"></i> {{ humidity }}%</p>
+          <p><i class="bi bi-barometer"></i> {{ pressure }} hPa</p>
+          <p><i class="bi bi-wind"></i> {{ windSpeed }} m/s <span class="bi bi-compass">{{ windDirection }}</span></p>
+          <p><i class="bi bi-sunrise"></i> {{ sunrise }}</p>
+          <p><i class="bi bi-sunset"></i> {{ sunset }}</p>
+          
+        </div>
+        
+        
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="map" id="map"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div class="container-fluid mt-3" style="background-color: #e3f2fd;">
+  <div class="row justify-content-center ">
+    <div class="col-md-6">
+      <div class="input-group mb-3 mt-3 ">
+        <input type="text" class="form-control" placeholder="Enter location">
+        <button class="btn btn-primary" style="border-radius: 3px;">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel">
+        <h3>{{ cityName }}</h3>
+        <p>{{ dateTime }}</p>
+        <p><i class="bi bi-thermometer"></i> {{ temperature }} &deg;C</p>
+        <p><i class="bi bi-droplet"></i> {{ humidity }}%</p>
+        <p><i class="bi bi-wind"></i> {{ windSpeed }} m/s {{ windDirection }}</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="map" id="map"></div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- <div class="cards">
     <div class="row">
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-green order-card">
@@ -80,4 +142,4 @@
 
       
 </div>
-<hr class="line">
+<hr class="line"> -->

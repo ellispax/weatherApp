@@ -1,4 +1,26 @@
-.container{
+.container {
+  margin: 80px auto;
+  max-width: 800px;
+  
+}
+.weather-info p{
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.panel {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.map {
+  height: 400px;
+  border-radius: 5px;
+}
+
+
+/* .container{
     margin-top: 40px;
     align-items: center;
     display: flex;
@@ -76,4 +98,4 @@ a:link {
   }
   .text-right{
       font-size: 10px;
-  }
+  } */
