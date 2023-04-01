@@ -16,6 +16,10 @@ class Weather(models.Model):
     humidity = models.FloatField()
     rain = models.CharField(max_length=100)
     pressure = models.FloatField()
+    wind_speed = models.FloatField()
+    wind_direction = models.CharField(max_length=50)
+    lat = models.FloatField()
+    lon = models.FloatField()
 
     def __str__(self):
         return f"{self.city} - {self.temperature}°C ({self.user.username} - {self.date_time})"
